@@ -23,12 +23,14 @@ First up, we need to install *another* package that CubSFS needs in order to fun
 Now we are ready to install CubSFS. To do this:  
     - Go to `Tools`.  
     - Go to `Install Packages`.  
-    - In the `Install From` select Package Archive File (.zip; .tar.gz)  
+    - In the `Install From` drop down menu select Package Archive File (.zip; .tar.gz)  
     - Browse your way to the CubSFS_1.0.tar.gz file (note, you don't need to `untar` it...also don't worry if you don't know what `untar` means!)  
 <img width="100%" src="../Images/Install_packages_menu.png">
     - Click on `Install`
 
-
+We are ready to load all the functions with the CubSFS package into this R session so they are available for us to use (installing the package is like buying a book and putting it on a shelf, loading the package is like getting the book out to read). Keeping with the book analogy, the command for loading in the package is:
+`library(cubSFS)`
+<img width="100%" src="../Images/Library_cubSFS.png">
 
 
 
