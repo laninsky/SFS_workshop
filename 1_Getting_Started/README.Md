@@ -10,11 +10,11 @@ Select your operating system, download, and install `R` however you install thin
 Although we could run our code directly in `R`, `R Studio` is a neat little GUI that allows you to save the code that you are writing for later reuse. Download `R Studio` (if it isn't already on your computer) at: `https://www.rstudio.com/products/rstudio/download/`  
 Download the `RStudio Desktop Open Source License` version that matches your operating system (note, can be quite a big download e.g. 150MB!), and then install `R Studio` however you install things on your operating system.
 
-### C) Installing tidyverse
-For "pretty plotting" purposes, we are next going to install the tidyverse package (if it isn't already installed on your computer). After opening R Studio, into the main console window, type:
+### C) Installing the tidyverse packages
+For "pretty plotting" purposes, we are next going to install the `tidyverse` package (if it isn't already installed on your computer). After opening `R Studio`, into the main console window, type:
 `install.packages("tidyverse")` 
 <img width="100%" src="../Images/Install_tidyverse.png">
-If you are prompted to install any of the dependent packages from source, `no` is the quickest option.
+If you are prompted to install any of the dependent packages from source, `no` is the quickest option.  `
 
 ### D) Downloading the CubSFS package
 Our next step is to download the CubSFS package. This package has additional functions that we'll use to do our demographic reconstructions. Head to:
@@ -38,9 +38,12 @@ We are ready to load all the functions with the CubSFS package into this R sessi
 `library(cubSFS)`
 <img width="100%" src="../Images/Library_cubSFS.png">
 
-### F) Loading the tidyverse packages
-We'll go ahead and load tidyverse and devtools too, using the same `library` command:  
-`library(tidyverse)`
+### F) Loading the tidyverse and parallel packages
+We'll go ahead and load `tidyverse` and `parallel` packages, using the same `library` command. We didn't need to install the `parallel` package as it is installed as part of base `R`:
+```
+library(tidyverse)
+library(parallel)
+```
 
 ### F) Sourcing modified CubSFS functions
 A few of the functions available in CubSFS need to be tweaked slightly from the original version. We need to download and source new versions of the following four functions: `AicCubSFS.R`, `CValpha.R`, `estimateAlpha.R`, and `estimateCubSFS.R`:
