@@ -38,12 +38,23 @@ We are ready to load all the functions with the CubSFS package into this R sessi
 `library(cubSFS)`
 <img width="100%" src="../Images/Library_cubSFS.png">
 
-We'll go ahead and load tidyverse too, using the same `library` command:
+### F) Loading the tidyverse packages
+We'll go ahead and load tidyverse and devtools too, using the same `library` command:  
 `library(tidyverse)`
 
-### F) Downloading and sourcing modified functions
-A few of the functions available in CubSFS need to be tweaked slightly from the original version. We need to download each of these files:
-AicCubSFS.R
-CValpha.R
-estimateAlpha.R
-estimateCubSFS.R
+### F) Sourcing modified CubSFS functions
+A few of the functions available in CubSFS need to be tweaked slightly from the original version. We need to download and source new versions of the following four functions: `AicCubSFS.R`, `CValpha.R`, `estimateAlpha.R`, and `estimateCubSFS.R`:
+```
+download.file("https://raw.githubusercontent.com/laninsky/SFS_workshop/main/Data_Scripts/AicCubSFS.R","AicCubSFS.R")
+source("AicCubSFS.R")
+
+download.file("https://raw.githubusercontent.com/laninsky/SFS_workshop/main/Data_Scripts/CValpha.R","CValpha.R")
+source("CValpha.R")
+
+download.file("https://raw.githubusercontent.com/laninsky/SFS_workshop/main/Data_Scripts/estimateAlpha.R","estimateAlpha.R")
+source("estimateAlpha.R")
+
+download.file("https://raw.githubusercontent.com/laninsky/SFS_workshop/main/Data_Scripts/estimateCubSFS.R","estimateCubSFS.R")
+source("estimateCubSFS.R")
+```
+Finally, we are ready to go!
