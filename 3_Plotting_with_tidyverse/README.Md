@@ -1,0 +1,6 @@
+
+### K)
+#12. Writing out the 50,000 time scale data so we can pull it back 
+# in and plot all the species at the same time after they are done
+write.table(resNt$Ntdf,paste(outputfilename,"popsize.txt",sep=""),row.names = FALSE, quote=FALSE)
+```
