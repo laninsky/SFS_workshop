@@ -121,7 +121,7 @@ Cool! We've got a few points that are informative in respect to the LGM (e.g. a 
 Note, also, that for this run, we aren't explicitly estimating Ne for any time point beyond 516,606.49 years ago (the oldest knot). You'll notice the reconstruction somewhat 'flat lines' beyond this point in the past in our `last_million` effective population size reconstruction.
 
 ### I) Run some bootstraps for estimating uncertainty
-In "real life", the more bootstraps the better, but as they can take >20min each, today we are just going to do two. In the meantime while yours are running, feel free to check out the plots in the next section
+In "real life", the more bootstraps the better, but as they can take 5-10 min each, today we are just going to do two. In the meantime while yours are running, feel free to check out the plots in the next section
 ```
 # Defining the number of bootstraps
 nb.boot <- 2
@@ -146,14 +146,18 @@ boot.res[[2]] <- estimateCubSFS(boot[,2],n.samples=n.samples,n.knots=time_points
 ```
 
 ### J) Generating the bootstrap results in "real time"
+We use code very similar to plotting our original SFS data. Note, given our limited number of bootstrap replicates, these may not span our actual estimate.
 ```
 # Plotting the the last 50kya (relevant to the LGM)
 TimeInYears <- seq(0,50000,by=1000)
 last_50k <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results,boot.res=boot.res, abstime=TimeInYears, is.folded = TRUE)
-
+```
+<img width="100%" src="../Images/median_w_bootstraps_50k.png">
+```
 # Plotting deeper time
 TimeInYears <- seq(0,1000000,by=1000)
 last_million <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results,boot.res=boot.res, abstime=TimeInYears, is.folded = TRUE)
 ```
+<img width="100%" src="../Images/median_w_bootstraps_1mill.png">
 
-For your own projects, it is worth writing out the cubsfs_results and boot objects in case you want to compare AIC values between different numbers of knots/oldest knot time values to optimize the choices around these.
+For your own projects, it is worth writing out the cubsfs_results and boot.res objects in case you want to compare AIC values between different numbers of knots/oldest knot time values to optimize the choices around these. Next up, [plotting these prettily using ggplot2](../3_Plotting_with_tidyverse/README.Md).
