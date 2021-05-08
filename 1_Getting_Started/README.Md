@@ -2,13 +2,13 @@
 Welcome to our workshop on using `CubSFS` to generate a demographic reconstruction based on a SFS (allele/site frequency spectrum). Alana will give you a brief spiel about what a SFS is and a general description of how this analysis works in just a sec, but first, let's download `R` and `R Studio`, and install `tidyverse` so the installation can proceed while she's prattling on (if these are not already installed on your computer).  
 
 ### A) Installing R
-First off, we need to install `R` (if it isn't already on your computer). After heading to: 
+First off, we need to install `R` (if it isn't already on your computer). After heading to 
 https://cran.rstudio.com/
-Select your operating system, download, and install `R` however you install things on your operating system.
+select your operating system, download, and install `R` however you install things on your operating system.
 
 ### B) Downloading R Studio
 Although we could run our code directly in `R`, `R Studio` is a neat little GUI that allows you to save the code that you are writing for later reuse. Download `R Studio` (if it isn't already on your computer) at: `https://www.rstudio.com/products/rstudio/download/`  
-Download the `RStudio Desktop Open Source License` version that matches your operating system (note, can be quite a big download e.g. 150MB!), and then install `R Studio` however you install things on your operating system.
+Download the `RStudio Desktop Open Source License` version that matches your operating system (note, it can be quite a big download e.g. 150MB!), and then install `R Studio` however you install things on your operating system.
 
 ### C) Installing the tidyverse packages
 For "pretty plotting" purposes, we are next going to install the `tidyverse` package (if it isn't already installed on your computer). After opening `R Studio`, into the main console window, type:
@@ -34,12 +34,12 @@ Now we are ready to install `CubSFS`. To do this, in `R studio`:
 <img width="50%" src="../Images/Install_packages_menu.png">  
     - Click on `Install`
 
-We are ready to load all the functions with the `CubSFS` package into this `R studio` session so they are available for us to use (installing the package is like buying a book and putting it on a shelf, loading the package is like getting the book out to read). Keeping with the book analogy, the command for loading in the package is:
-`library(cubSFS)`
+We are ready to load all the functions included in the `CubSFS` package into this `R studio` session so they are available for us to use (installing the package is like buying a book and putting it on a shelf, loading the package is like getting the book out to read). Keeping with the book analogy, the command for loading in the package is:
+`library(CubSFS)`
 <img width="100%" src="../Images/Library_cubSFS.png">
 
 ### F) Loading the tidyverse and parallel packages
-We'll go ahead and load `tidyverse` and `parallel` packages, using the same `library` command. We didn't need to install the `parallel` package as it is installed as part of base `R`:
+We'll go ahead and load the `tidyverse` and `parallel` packages, using the same `library` command. We didn't need to install the `parallel` package when we installed the other packages, as it is installed as part of base `R`:
 ```
 library(tidyverse)
 library(parallel)
