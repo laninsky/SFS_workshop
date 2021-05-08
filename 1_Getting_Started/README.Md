@@ -1,5 +1,5 @@
 ## 1. Getting Started
-Welcome to our workshop on using CubSFS to generate a demographic reconstruction based on a SFS (allele/site frequency spectrum). Alana will give you a brief spiel about what a SFS is and a general description of how this analysis works in just a sec, but first, let's download `R` and `R Studio`, and install `tidyverse` so the installation can proceed while she's prattling on.  
+Welcome to our workshop on using `CubSFS` to generate a demographic reconstruction based on a SFS (allele/site frequency spectrum). Alana will give you a brief spiel about what a SFS is and a general description of how this analysis works in just a sec, but first, let's download `R` and `R Studio`, and install `tidyverse` so the installation can proceed while she's prattling on (if these are not already installed on your computer).  
 
 ### A) Installing R
 First off, we need to install `R` (if it isn't already on your computer). After heading to: 
@@ -17,20 +17,20 @@ For "pretty plotting" purposes, we are next going to install the `tidyverse` pac
 If you are prompted to install any of the dependent packages from source, `no` is the quickest option.  
 
 ### D) Downloading the CubSFS package
-Our next step is to download the CubSFS package. This package has additional functions that we'll use to do our demographic reconstructions. Head to
+Our next step is to download the `CubSFS` package. This package has additional functions that we'll use to do our demographic reconstructions. Head to
 https://github.com/blwaltoft/CubSFS/blob/master/CubSFS_1.0.tar.gz
 and click on the `Download` button
 
 ### E) Installing the CubSFS package
-First up, we need to install *another* package that CubSFS needs in order to function, `nloptr`. Into the main `R studio` console window, type:
+First up, we need to install *another* package that `CubSFS` needs in order to function, `nloptr`. Into the main `R studio` console window, type:
 `install.packages("nloptr")`
 <img width="100%" src="../Images/Install_nloptr.png">
 
 Now we are ready to install CubSFS. To do this, in `R studio`:  
     - Go to `Tools`.  
     - Go to `Install Packages`.  
-    - In the `Install From` drop down menu select Package Archive File (.zip; .tar.gz)  
-    - Browse your way to the CubSFS_1.0.tar.gz file (note, you don't need to `untar` it...also don't worry if you don't know what `untar` means!). Your `Install to Library` (and potentially `Package archive`) drop down menus will look different to mine.  
+    - In the `Install From` drop down menu select `Package Archive File (.zip; .tar.gz)`  
+    - Browse your way to the `CubSFS_1.0.tar.gz` file (note, you don't need to `untar` it...also don't worry if you don't know what `untar` means!). Your `Install to Library` (and potentially `Package archive`) drop down menus will look different to mine.  
 <img width="50%" src="../Images/Install_packages_menu.png">  
     - Click on `Install`
 
