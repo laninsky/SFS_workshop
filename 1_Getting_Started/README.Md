@@ -26,7 +26,7 @@ First up, we need to install *another* package that `CubSFS` needs in order to f
 `install.packages("nloptr")`
 <img width="100%" src="../Images/Install_nloptr.png">
 
-Now we are ready to install CubSFS. To do this, in `R studio`:  
+Now we are ready to install `CubSFS`. To do this, in `R studio`:  
     - Go to `Tools`.  
     - Go to `Install Packages`.  
     - In the `Install From` drop down menu select `Package Archive File (.zip; .tar.gz)`  
