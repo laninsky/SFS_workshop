@@ -10,6 +10,9 @@ By the end of today hopefully you will:
 5. Evaluate whether results are valid based on knot placement, bootstrap, and QC metrics.
 6. Plot the data
 
+## Ready to jump into it?
+Head to [the instructions for getting started](1_Getting_Started/README.Md)
+
 ## Additional information
 CubSFS paper:  
 Waltoft, B.L. and Hobolth, A., 2018. Non-parametric estimation of population size changes from the site frequency spectrum. Statistical applications in genetics and molecular biology, 17(3). https://www.degruyter.com/document/doi/10.1515/sagmb-2017-0061/html
