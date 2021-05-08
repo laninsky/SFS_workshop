@@ -14,27 +14,27 @@ Download the `RStudio Desktop Open Source License` version that matches your ope
 For "pretty plotting" purposes, we are next going to install the `tidyverse` package (if it isn't already installed on your computer). After opening `R Studio`, into the main console window, type:
 `install.packages("tidyverse")` 
 <img width="100%" src="../Images/Install_tidyverse.png">
-If you are prompted to install any of the dependent packages from source, `no` is the quickest option.  `
+If you are prompted to install any of the dependent packages from source, `no` is the quickest option.  
 
 ### D) Downloading the CubSFS package
-Our next step is to download the CubSFS package. This package has additional functions that we'll use to do our demographic reconstructions. Head to:
+Our next step is to download the CubSFS package. This package has additional functions that we'll use to do our demographic reconstructions. Head to
 https://github.com/blwaltoft/CubSFS/blob/master/CubSFS_1.0.tar.gz
 and click on the `Download` button
 
 ### E) Installing the CubSFS package
-First up, we need to install *another* package that CubSFS needs in order to function, `nloptr`. After opening R Studio, into the main console window, type:
+First up, we need to install *another* package that CubSFS needs in order to function, `nloptr`. Into the main `R studio` console window, type:
 `install.packages("nloptr")`
 <img width="100%" src="../Images/Install_nloptr.png">
 
-Now we are ready to install CubSFS. To do this:  
+Now we are ready to install CubSFS. To do this, in `R studio`:  
     - Go to `Tools`.  
     - Go to `Install Packages`.  
     - In the `Install From` drop down menu select Package Archive File (.zip; .tar.gz)  
-    - Browse your way to the CubSFS_1.0.tar.gz file (note, you don't need to `untar` it...also don't worry if you don't know what `untar` means!)  
-<img width="100%" src="../Images/Install_packages_menu.png">
+    - Browse your way to the CubSFS_1.0.tar.gz file (note, you don't need to `untar` it...also don't worry if you don't know what `untar` means!). Your `Install to Library` (and potentially `Package archive`) drop down menus will look different to mine.  
+<img width="50%" src="../Images/Install_packages_menu.png">  
     - Click on `Install`
 
-We are ready to load all the functions with the CubSFS package into this R session so they are available for us to use (installing the package is like buying a book and putting it on a shelf, loading the package is like getting the book out to read). Keeping with the book analogy, the command for loading in the package is:
+We are ready to load all the functions with the `CubSFS` package into this `R studio` session so they are available for us to use (installing the package is like buying a book and putting it on a shelf, loading the package is like getting the book out to read). Keeping with the book analogy, the command for loading in the package is:
 `library(cubSFS)`
 <img width="100%" src="../Images/Library_cubSFS.png">
 
@@ -45,8 +45,8 @@ library(tidyverse)
 library(parallel)
 ```
 
-### F) Sourcing modified CubSFS functions
-A few of the functions available in CubSFS need to be tweaked slightly from the original version. We need to download and source new versions of the following four functions: `AicCubSFS.R`, `CValpha.R`, `estimateAlpha.R`, and `estimateCubSFS.R`:
+### G) Sourcing modified CubSFS functions
+A few of the functions available in `CubSFS` need to be tweaked slightly from the original version. We need to download and source new versions of the following four functions: `AicCubSFS.R`, `CValpha.R`, `estimateAlpha.R`, and `estimateCubSFS.R`:
 ```
 download.file("https://raw.githubusercontent.com/laninsky/SFS_workshop/main/Data_Scripts/AicCubSFS.R","AicCubSFS.R")
 source("AicCubSFS.R")
