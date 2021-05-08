@@ -60,4 +60,4 @@ source("estimateAlpha.R")
 download.file("https://raw.githubusercontent.com/laninsky/SFS_workshop/main/Data_Scripts/estimateCubSFS.R","estimateCubSFS.R")
 source("estimateCubSFS.R")
 ```
-Finally, we are ready to go!
+Finally, we are ready to go! Let's head to the [instructions for running CubSFS](../2_Running_CubSFS/README.Md)
