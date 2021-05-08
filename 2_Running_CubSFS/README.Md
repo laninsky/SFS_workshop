@@ -122,3 +122,33 @@ Note, also, that for this run, we aren't explicitly estimating Ne for any time p
 
 ### I) Run some bootstraps for estimating uncertainty
 In "real life", the more bootstraps the better, but as they take 5-10min each, today we are just going to do two. 
+```
+# Defining the number of bootstraps
+nb.boot <- 2
+
+# Creating the object we'll save the boots to
+boot <- rmultinom(nb.boot,total.nb.sites,c(total.nb.sites-sum(obsSFS),obsSFS)/total.nb.sites)
+
+# Running the first bootstrap
+boot.res[[1]] <- estimateCubSFS(boot[,1],n.samples=n.samples,n.knots=time_points,t_m=oldest_time,is.folded=TRUE)
+
+# Running the second bootstrap
+boot.res[[2]] <- estimateCubSFS(boot[,1],n.samples=n.samples,n.knots=time_points,t_m=oldest_time,is.folded=TRUE)
+
+# Some boots can cause the optimisation to hang, potentially because
+# of https://github.com/facebook/prophet/issues/842. If this occurs
+# kill the run, and restart it.
+```
+
+### J) Generating the bootstrap results in "real time"
+```
+# Plotting the the last 50kya (relevant to the LGM)
+TimeInYears <- seq(0,50000,by=1000)
+last_50k <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results,boot.res=boot.res, abstime=TimeInYears, is.folded = TRUE)
+
+# Plotting deeper time
+TimeInYears <- seq(0,1000000,by=1000)
+last_million <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results,boot.res=boot.res, abstime=TimeInYears, is.folded = TRUE)
+```
+
+For your own projects, it is worth writing out the cubsfs_results and boot objects in case you want to compare AIC values between different numbers of knots/oldest knot time value.
