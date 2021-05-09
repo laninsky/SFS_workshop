@@ -32,7 +32,11 @@ obsSFS <- round(obsSFS,digits=0)
 
 ### C) Obtaining a few parameters we'll need from the SFS file
 ```
-# Number of samples
+# Number of samples (although our data is folded)
+# the input program still has the "back half" of
+# the SFS, but with 0s as entries. This means that
+# the length of this SFS is equal to 2N samples,
+# which is what CubSFS wants for n.samples
 n.samples <- length(obsSFS)
 
 # Total number of sites in SFS
@@ -42,7 +46,8 @@ total.nb.sites <- sum(obsSFS)
 # Removing the monomorphic sites for estimating the relative demography of the population
 obsSFS <- obsSFS[-1]
 
-# As this is a folded matrix, removing the empty entries
+# As this is a folded SFS, now removing the empty 
+# entries for our analyses
 obsSFS <- obsSFS[1:(length(obsSFS)/2)]
 ```
 
