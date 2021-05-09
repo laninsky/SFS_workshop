@@ -7,7 +7,8 @@ https://cran.rstudio.com/
 select your operating system, download, and install `R` however you install things on your operating system.
 
 ### B) Downloading R Studio
-Although we could run our code directly in `R`, `R Studio` is a neat little GUI that allows you to save the code that you are writing for later reuse. Download `R Studio` (if it isn't already on your computer) at: `https://www.rstudio.com/products/rstudio/download/`  
+Although we could run our code directly in `R`, `R Studio` is a neat little GUI that allows you to save the code that you are writing for later reuse. Download `R Studio` (if it isn't already on your computer) at: [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)  
+
 Download the `RStudio Desktop Open Source License` version that matches your operating system (note, it can be quite a big download e.g. 150MB!), and then install `R Studio` however you install things on your operating system.
 
 ### C) Installing the tidyverse packages
