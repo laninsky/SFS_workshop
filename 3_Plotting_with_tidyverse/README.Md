@@ -13,6 +13,6 @@ ggplot(last_50k$Ntdf) +
                 theme_bw(base_size = 6) + ylab("Effective population size") + xlab ("Time")
 ```
 If you get through all of this, some extension exercises:
-(1) Try plotting your `last_million` results instead 
-(2) Run a few more bootstrap replicates through `CubSFS` and regenerate the results (e.g. `last_50k`) to see how that affects the plot.
-(3) Experiment with the `time_points` (`knots`) and `oldest_time` (`t_m`) to see how that impacts on the demographic reconstruction and/or the AIC values.
+(1) Try plotting your `last_million` results instead.  
+(2) Run a few more bootstrap replicates through `CubSFS` and regenerate the results (e.g. `last_50k`) to see how that affects the plot.  
+(3) Experiment with the `time_points` (`knots`) and `oldest_time` (`t_m`) to see how that impacts on the demographic reconstruction and/or the AIC values.  
