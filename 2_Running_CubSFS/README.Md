@@ -105,13 +105,14 @@ A qqplot of expected (dashed line) and observed (red dot) counts in the SFS. Dot
 
 ```
 # Plotting focussing on time scales relevant to the Last Glacial Maximum (LGM)
+# AKA from 50,000 years ago until the present, in 1,000 year increments
 TimeInYears <- seq(0,50000,by=1000)
 last_50k <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results, abstime=TimeInYears, is.folded = TRUE)
 ```
 <img width="100%" src="../Images/last_50k_N.png"> 
 
 ```
-# Plotting deeper time
+# Plotting deeper time (1 million years ago, by 1,000 year increments)
 TimeInYears <- seq(0,1000000,by=1000)
 last_million <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results, abstime=TimeInYears,is.folded = TRUE)
 ```
