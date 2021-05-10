@@ -38,15 +38,17 @@ obsSFS <- round(obsSFS,digits=0)
 # which is what CubSFS wants as a value for n.samples
 n.samples <- length(obsSFS)
 
-# Total number of sites in SFS
-# We'll need this number for converting our estimates into absolute time
+# We need the total number of sites in our SFS to convert our 
+# relative demographic reconstruction into absolute time
 total.nb.sites <- sum(obsSFS)
 
-# Removing the monomorphic sites for estimating the relative demography of the population
+# Now we've recorded the total number of sites in our SFS, we
+# remove the monomorphic sites, as these are not used for
+# estimating the relative demography of the population
 obsSFS <- obsSFS[-1]
 
-# As this is a folded SFS, now removing the empty 
-# entries for our analyses
+# As this is a folded SFS, we now remove the empty entries for 
+# our analyses so that CubSFS doesn't get confused
 obsSFS <- obsSFS[1:(length(obsSFS)/2)]
 ```
 
