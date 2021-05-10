@@ -32,11 +32,10 @@ obsSFS <- round(obsSFS,digits=0)
 
 ### C) Obtaining a few parameters we'll need from the SFS file
 ```
-# Number of samples (although our data is folded)
-# the input program still has the "back half" of
-# the SFS, but with 0s as entries. This means that
-# the length of this SFS is equal to 2N samples,
-# which is what CubSFS wants for n.samples
+# Although our data is a folded SFS, the the input program still 
+# has the "back half" of the SFS, but with 0s as entries. This 
+# means that the length of this SFS is equal to 2N samples,
+# which is what CubSFS wants as a value for n.samples
 n.samples <- length(obsSFS)
 
 # Total number of sites in SFS
