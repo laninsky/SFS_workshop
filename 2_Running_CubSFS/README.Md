@@ -55,19 +55,21 @@ obsSFS <- obsSFS[1:(length(obsSFS)/2)]
 
 ### D) Setting some parameters for the analysis
 ```
-# mutation rate in sites/gen
+# Mutation rate in sites/gen
 mu <- 5e-08
 
-# generation time per year
+# Generation time in years
 genyr <- 8
 
-# the number of time points the reconstruction will be sliced up into
+# The number of time points (AKA "knots") the reconstruction will
+# be optimised at
 time_points <- 29
 
-# oldest time point in coalescent units (1 coalescent unit = 2Ne generations)
+# Oldest time point in coalescent units (1 coalescent unit = 2Ne generations)
+# Referred to as "t_m" in CubSFS documentation
 oldest_time <- 0.25
 
-#Set the number of cores (use detectCores to use all)
+# Setting the number of cores (use detectCores to use all)
 numcores <- detectCores()
 ```
 
