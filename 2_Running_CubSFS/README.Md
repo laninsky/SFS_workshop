@@ -32,7 +32,7 @@ obsSFS <- round(obsSFS,digits=0)
 
 ### C) Obtaining a few parameters we'll need from the SFS file
 ```
-# Although our data is a folded SFS, the the input program still 
+# Although our data is a folded SFS, the input program still 
 # has the "back half" of the SFS, but with 0s as entries. This 
 # means that the length of this SFS is equal to 2N samples,
 # which is what CubSFS wants as a value for n.samples
