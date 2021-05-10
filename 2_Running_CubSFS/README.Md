@@ -171,4 +171,4 @@ last_million <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results,boot
 ```
 <img width="100%" src="../Images/median_w_bootstraps_1mill.png">
 
-For your own projects, it is worth writing out the cubsfs_results and boot.res objects in case you want to compare AIC values between different numbers of knots/oldest knot time values to optimize the choices around these (and so you don't need to run CubSFS again for a given combination of parameters!). Next up, [plotting these prettily using ggplot2](../3_Plotting_with_tidyverse/README.Md).
+For your own projects, it is worth writing out the `cubsfs_results` and `boot.res` objects in case you want to compare AIC values between different numbers of knots/oldest knot time values to optimize the choices around these (and so you don't need to run `CubSFS` again for a given combination of parameters!). Next up, [plotting these prettily using ggplot2](../3_Plotting_with_tidyverse/README.Md).
