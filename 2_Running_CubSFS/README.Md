@@ -23,7 +23,7 @@ download.file("https://raw.githubusercontent.com/laninsky/SFS_workshop/main/Data
 # Reading in the file, skipping the first line
 obsSFS <- read_table2("lamprey_sfs.txt",skip = 1)
 
-#  Converting the file to a matrix
+# Converting the file to a matrix
 obsSFS <- as.matrix(obsSFS)[1,]
 
 # Rounding the entries as CubSFS can have problems with decimals
