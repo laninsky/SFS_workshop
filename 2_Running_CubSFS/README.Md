@@ -1,5 +1,5 @@
 ## Running CubSFS
-If you've jumped straight to this section, please make sure that you've got `R` and `R studio` installed, as well as loading the packages `tidyverse`, `parallel`, and `CubSFS` (see [1_Getting_Started](../1_Getting_Started/README.Md) for instructions on installing `cubSFS`). 
+If you've jumped straight to this section, please make sure that you've got `R` and `R studio` installed (and that they are updated to the most recent stable versions), as well as loading the packages `tidyverse`, `parallel`, and `CubSFS` (see [1_Getting_Started](../1_Getting_Started/README.Md) for instructions on installing `cubSFS`). 
 ```
 library(tidyverse)
 library(CubSFS)
