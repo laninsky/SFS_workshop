@@ -1,6 +1,9 @@
 # SFS_workshop
 Using `CubSFS` to get demographic reconstructions of a population using an SFS (allele/site frequency spectrum)
 
+## What is a SFS?
+[What the heck is an SFS?](Data_Scripts/What_the_heck_is_an_SFS.pdf)
+
 ## Objectives
 By the end of today you will:
 1. Be able to install `R Studio` and manually install an `R` package
