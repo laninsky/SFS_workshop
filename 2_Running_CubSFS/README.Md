@@ -23,7 +23,7 @@ download.file("https://raw.githubusercontent.com/laninsky/SFS_workshop/main/Data
 # Reading in the file, skipping the first line
 obsSFS <- read_table2("lamprey_sfs.txt",skip = 1)
 
-#  Converting the file to a matrix
+# Converting the file to a matrix
 obsSFS <- as.matrix(obsSFS)[1,]
 
 # Rounding the entries as CubSFS can have problems with decimals
@@ -32,40 +32,44 @@ obsSFS <- round(obsSFS,digits=0)
 
 ### C) Obtaining a few parameters we'll need from the SFS file
 ```
-# Number of samples (although our data is folded)
-# the input program still has the "back half" of
-# the SFS, but with 0s as entries. This means that
-# the length of this SFS is equal to 2N samples,
-# which is what CubSFS wants for n.samples
+# Although our data is a folded SFS, this file still has the 
+# "back half" of the SFS (the full 2N entries), but with 0s as 
+# entries for the "back half". This means that the length of this 
+# SFS is equal to 2N samples, which is what CubSFS wants as a value 
+# for n.samples
 n.samples <- length(obsSFS)
 
-# Total number of sites in SFS
-# We'll need this number for converting our estimates into absolute time
+# We need the total number of sites in our SFS to convert our 
+# relative demographic reconstruction into absolute time
 total.nb.sites <- sum(obsSFS)
 
-# Removing the monomorphic sites for estimating the relative demography of the population
+# Now we've recorded the total number of sites in our SFS, we
+# remove the monomorphic sites, as these are not used for
+# estimating the relative demography of the population
 obsSFS <- obsSFS[-1]
 
-# As this is a folded SFS, now removing the empty 
-# entries for our analyses
+# As this is a folded SFS, we now remove the empty entries for 
+# our analyses so that CubSFS doesn't get confused
 obsSFS <- obsSFS[1:(length(obsSFS)/2)]
 ```
 
 ### D) Setting some parameters for the analysis
 ```
-# mutation rate in sites/gen
+# Mutation rate in sites/gen
 mu <- 5e-08
 
-# generation time per year
+# Generation time in years
 genyr <- 8
 
-# the number of time points the reconstruction will be sliced up into
+# The number of time points (AKA "knots") the reconstruction will
+# be optimised at
 time_points <- 29
 
-# oldest time point in coalescent units (1 coalescent unit = 2Ne generations)
+# Oldest time point in coalescent units (1 coalescent unit = 2Ne generations)
+# Referred to as "t_m" in CubSFS documentation
 oldest_time <- 0.25
 
-#Set the number of cores (use detectCores to use all)
+# Setting the number of cores (use detectCores to use all)
 numcores <- detectCores()
 ```
 
@@ -101,13 +105,14 @@ A qqplot of expected (dashed line) and observed (red dot) counts in the SFS. Dot
 
 ```
 # Plotting focussing on time scales relevant to the Last Glacial Maximum (LGM)
+# AKA from 50,000 years ago until the present, in 1,000 year increments
 TimeInYears <- seq(0,50000,by=1000)
 last_50k <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results, abstime=TimeInYears, is.folded = TRUE)
 ```
 <img width="100%" src="../Images/last_50k_N.png"> 
 
 ```
-# Plotting deeper time
+# Plotting deeper time (1 million years ago, by 1,000 year increments)
 TimeInYears <- seq(0,1000000,by=1000)
 last_million <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results, abstime=TimeInYears,is.folded = TRUE)
 ```
@@ -166,4 +171,4 @@ last_million <- PlotCubSFS(n.samples,mu,total.nb.sites,genyr,cubsfs_results,boot
 ```
 <img width="100%" src="../Images/median_w_bootstraps_1mill.png">
 
-For your own projects, it is worth writing out the cubsfs_results and boot.res objects in case you want to compare AIC values between different numbers of knots/oldest knot time values to optimize the choices around these (and so you don't need to run CubSFS again for a given combination of parameters!). Next up, [plotting these prettily using ggplot2](../3_Plotting_with_tidyverse/README.Md).
+For your own projects, it is worth writing out the `cubsfs_results` and `boot.res` objects in case you want to compare AIC values between different numbers of knots/oldest knot time values to optimize the choices around these (and so you don't need to run `CubSFS` again for a given combination of parameters!). Next up, [plotting these prettily using ggplot2](../3_Plotting_with_tidyverse/README.Md).
