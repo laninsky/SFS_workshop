@@ -1,5 +1,5 @@
 ## 1. Getting Started
-Welcome to our workshop on using `CubSFS` to generate a demographic reconstruction based on an SFS (allele/site frequency spectrum). Alana will give you a brief spiel about what a SFS is and a general description of how this analysis works in just a sec, but first, let's download `R` and `R Studio`, and install `tidyverse` so the installation can proceed while she's prattling on (if these are not already installed on your computer).  
+Welcome to our workshop on using `CubSFS` to generate a demographic reconstruction based on an SFS (allele/site frequency spectrum). Alana will give you [a brief spiel](../Data_Scripts/What_the_heck_is_an_SFS.pdf) about what a SFS is and a general description of how this analysis works in just a sec, but first, let's download `R` and `R Studio`, and install `tidyverse` so the installation can proceed while she's prattling on (if these are not already installed on your computer).  
 
 ### A) Installing R
 First off, we need to install `R` (if it isn't already on your computer). After heading to 
